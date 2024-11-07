@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VINAYAKA LOGIN</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./login.css">
+  <style>
+    /* Additional CSS for header styling */
+    header {
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      background-color: #f8f9fa; /* light background color */
+      border-bottom: 2px solid #dee2e6; /* subtle border */
+    }
+
+    /* CSS to position text over image */
+    .bg-full {
+      position: relative;
+    }
+
+    .bg-full::after {
+      content: "WELCOME TO VINAYAKA SAFE HOME";
+      position: absolute;
+      padding-bottom: 200px;
+      font-size: xx-large;
+      font-weight: 800;
+      font-stretch: expanded;
+ 
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: rgb(235, 213, 15);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* optional text shadow */
+    }
+    
+  </style>
+</head>
+<body>
+
+<main id="main" class="d-flx bg-full" role="main">
+    <section class="login d-flx">
+        <form id="loginForm" class="frm-login d-flx" role="login">
+            <input type="text" placeholder="User" id="userLogin" autofocus required="required" autocomplete="off">
+            <input type="password" placeholder="Pass" id="passLogin" required="required" autocomplete="off">
+            <button type="submit" id="submitLogin">ENTRAR</button>
+        </form>
+    </section>
+</main>
+<!-- partial -->
+<script src="./login.js"></script>
+<script>
+  // List to store user credentials
+  var users = [];
+
+  // Function to check if a user exists
+  function userExists(username, password) {
+    return users.some(function(user) {
+      return user.username === username && user.password === password;
+    });
+  }
+
+  // Function to add a new user
+  function addUser(username, password) {
+    users.push({ username: username, password: password });
+  }
+
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    // Get the username and password values
+    var username = document.getElementById('userLogin').value;
+    var password = document.getElementById('passLogin').value;
+
+    // Check if the user exists
+    if (userExists(username, password)) {
+      // Redirect to index.html upon successful login
+      window.location.href = "index.html";
+    } else {
+      // Add the new user to the list and accept the login
+      addUser(username, password);
+      // Redirect to index.html upon successful registration
+      window.location.href = "index.html";
+    }
+  });
+</script>
+
+</body>
+</html>

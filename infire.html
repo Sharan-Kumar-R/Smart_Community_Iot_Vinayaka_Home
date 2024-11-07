@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flame Control</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./infire.css">
+  <style>
+    /* Add styles for the siren effect */
+    .siren {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, transparent 50%, rgba(255, 0, 0, 0.2));
+      animation: siren-blink 1s infinite;
+      display: none; /* Hidden by default */
+      pointer-events: none; /* Make sure it doesn't block interactions */
+      perspective: 1000px; /* 3D perspective */
+    }
+
+    @keyframes siren-blink {
+      0%, 100% {
+        background: radial-gradient(circle, transparent 50%, rgba(255, 0, 0, 0.2));
+      }
+      50% {
+        background: radial-gradient(circle, transparent 50%, rgba(255, 0, 0, 0.4));
+      }
+    }
+
+    /* Add 3D effect */
+    
+  </style>
+</head>
+<body>
+  <div class="g-candle">
+    <div class="g-body"></div>
+    <div class="g-fire-box">
+      <div class="g-fire" id="flameContainer">
+        <!-- Use JavaScript to toggle the flame class -->
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        <div class="g-ball" id="flame1"></div>
+        <div class="g-ball" id="flame2"></div>
+        <div class="g-ball" id="flame3"></div>
+        <div class="g-ball" id="flame4"></div>
+        <div class="g-ball" id="flame5"></div>
+        
+        <!-- Add more g-ball divs as needed -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Siren effect -->
+  <div class="siren" id="sirenEffect"></div>
+
+  <!-- Sound effect -->
+  <audio id="sirenSound" src="mixkit-ambulance-siren-us-1642.wav"></audio>
+
+  <script>
+    const airurl = "https://api.thingspeak.com/channels/2731561/feeds.json?results=1";
+    async function updateFlame() {
+      const response = await fetch(airurl);
+      const data = await response.json();
+      const flameValue = data.feeds[0].field3;
+
+      if (flameValue == 0) {
+        // Flame is off
+        document.getElementById("flameContainer").classList.remove("g-fire");
+        document.getElementById("sirenEffect").style.display = "none"; // Hide siren effect
+        document.getElementById("sirenSound").pause(); // Pause siren sound
+      } else {
+        // Flame is on
+        document.getElementById("flameContainer").classList.add("g-fire");
+        alert("Fire detected! -contact 101 "); // Alert for fire
+        document.getElementById("sirenEffect").style.display = "block"; // Show siren effect
+        const sirenSound = document.getElementById("sirenSound");
+        sirenSound.currentTime = 0; // Reset sound to start
+        sirenSound.play(); // Play siren sound
+      }
+    }
+
+    // Update the flame initially
+    updateFlame();
+
+    // Update the flame every 5 seconds (for example)
+    setInterval(updateFlame, 5000);
+  </script>
+</body>
+</html>
